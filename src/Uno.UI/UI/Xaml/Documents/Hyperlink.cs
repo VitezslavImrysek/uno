@@ -201,11 +201,11 @@ namespace Windows.UI.Xaml.Documents
 			set { SetValue(IsTabStopProperty, value); }
 		}
 
-		public static DependencyProperty IsTabStopProperty =
+		public static DependencyProperty IsTabStopProperty { get; } =
 			DependencyProperty.Register(
-				"IsTabStop",
+				nameof(IsTabStop),
 				typeof(bool),
-				typeof(Control),
+				typeof(Hyperlink),
 				new FrameworkPropertyMetadata(defaultValue: (bool)true)
 			);
 
