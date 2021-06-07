@@ -212,5 +212,7 @@ namespace Windows.UI.Xaml.Controls
 
 			return SnapPointsProvider.GetRegularSnapPoints(orientation, alignment, out offset);
 		}
+
+		internal override bool CanHaveChildren() => true;
 	}
 }
