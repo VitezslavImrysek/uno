@@ -3729,10 +3729,24 @@
 			
 			<Member
 				fullName="System.Boolean Windows.UI.Xaml.UIElement.DispatchEvent(System.Int32 handle, System.String eventName, System.String eventArgs)"
-				reason="Public only for marshaling purposes, need to change return value" />
+				reason="Public only for marshaling purposes, need to change return value" />			
 
-
-
+		</Methods>
+		<Fields>
+			<Member
+				fullName="Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.XamlControlsResources::UseCompactResourcesProperty"
+				reason="This should be a property, not a field" />
+			<Member
+				fullName="System.Int32 Windows.UI.Xaml.Automation.Peers.PatternInterface::value__"
+				reason="This enum is an uint in UWP, not an int" />
+		</Fields>
+		<Properties>
+		</Properties>
+	</IgnoreSet>	
+	<IgnoreSet baseVersion="3.8.6">
+		<Types>
+		</Types>
+		<Methods>
 			<!-- Focus management -->
 			<Member
 				fullName="System.Void Windows.UI.Xaml.Controls.FocusDisengagedEventArgs..ctor()"
@@ -3791,23 +3805,6 @@
 			<Member
 				fullName="AppKit.NSView Windows.UI.Xaml.Input.FocusManager.InnerFindNextFocusableElement(Windows.UI.Xaml.Input.FocusNavigationDirection focusNavigationDirection)"
 				reason="Should not be public" />
-
-		</Methods>
-		<Fields>
-			<Member
-				fullName="Windows.UI.Xaml.DependencyProperty Microsoft.UI.Xaml.Controls.XamlControlsResources::UseCompactResourcesProperty"
-				reason="This should be a property, not a field" />
-			<Member
-				fullName="System.Int32 Windows.UI.Xaml.Automation.Peers.PatternInterface::value__"
-				reason="This enum is an uint in UWP, not an int" />
-		</Fields>
-		<Properties>
-		</Properties>
-	</IgnoreSet>	
-	<IgnoreSet baseVersion="3.8.6">
-		<Types>
-		</Types>
-		<Methods>
 		</Methods>
 		<Fields>
 		</Fields>
