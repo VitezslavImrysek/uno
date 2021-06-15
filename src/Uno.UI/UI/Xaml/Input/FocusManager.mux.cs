@@ -1700,7 +1700,7 @@ namespace Windows.UI.Xaml.Input
 			//TODO:MZ:Exceptions can break focus forever
 			if (_asyncOperation != null && shouldCompleteAsyncOperation == false)
 			{
-				throw new InvalidOperationException("An asynchronous operation is in progress.");
+				//throw new InvalidOperationException("An asynchronous operation is in progress.");
 
 				//return Cleanup();
 			}
