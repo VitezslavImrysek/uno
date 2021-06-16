@@ -1811,6 +1811,10 @@ namespace Windows.UI.Xaml.Input
 			}
 
 			// Update the focused control
+			if (this.Log().IsEnabled(LogLevel.Debug))
+			{
+				_log.Value.LogDebug($"{nameof(UpdateFocus)}() - oldFocus={_focusedElement} ({_realFocusStateForFocusedElement}), newFocus={newFocusTarget} ({nonCoercedFocusState})");
+			}
 			_focusedElement = newFocusTarget;
 			_realFocusStateForFocusedElement = nonCoercedFocusState;
 
