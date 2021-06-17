@@ -2316,7 +2316,6 @@ namespace Windows.UI.Xaml.Input
 
 			if (FindNextFocus(new FindFocusOptions(direction, queryOnly), xyFocusOptions, movement.Target, false) is DependencyObject nextFocusedElement)
 			{
-				this.Log().LogError("Next focused" + nextFocusedElement?.GetType().Name);
 				result = SetFocusedElement(new FocusMovement(nextFocusedElement, movement));
 
 				if (result.WasMoved && !result.WasCanceled && xyFocusOptions.UpdateManifold)
@@ -2552,7 +2551,6 @@ namespace Windows.UI.Xaml.Input
 
 		private void UpdateFocusRect(FocusNavigationDirection focusNavigationDirection, bool cleanOnly)
 		{
-			this.Log().LogError("Updating focus rect");
 			_focusTarget = GetFocusTarget();
 			_focusRectManager.UpdateFocusRect(_focusedElement, _focusTarget, focusNavigationDirection, cleanOnly);
 		}
