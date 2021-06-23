@@ -67,6 +67,9 @@ source $BUILD_SOURCESDIRECTORY/build/android-uitest-wait-systemui.sh
 # list active devices
 $ANDROID_HOME/platform-tools/adb devices
 
+# Workaround for https://github.com/microsoft/appcenter/issues/1451
+$ANDROID_HOME/platform-tools/adb shell settings put global hidden_api_policy 1
+
 echo "Emulator started"
 
 if [ "$UITEST_TEST_MODE_NAME" == 'Snapshots' ];
